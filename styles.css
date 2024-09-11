@@ -1,0 +1,66 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#product-list {
+  padding:10px;
+  display:grid;/*gives us a grid instad of vertical column*/
+  grid-template-columns: auto auto auto;/*creates 3 columns*/
+  width: 100%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  /* lets us have gaps in the grid */
+}
+
+.product {
+  border: 1px solid #0e0000;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+  padding-bottom: 10px;
+  /* spaces out the cells of the grid */
+
+}
+
+/* Pseudo-classes for link behavior and order with errors */
+.product a {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+  /* hover color over link */
+}
+
+a:visited{
+  color: purple;
+  /* shows that the link was clicked */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Clear floats to avoid parent collapse */
+#product-list::after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+/* this inserts the content AFTER the creation of the elements or tables in this code
+ */
+ /* by leaving content blank, it shows that the element should be empty */
+ /* this also clears out any floats that would be on going */
